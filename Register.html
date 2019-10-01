@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<style>
+	h1{
+		color:red;
+		border:8;
+		text-align: center;
+	}
+	p{
+		color:black;
+        font-size: 20px;
+	}
+	li{
+		text-align: center;
+	}
+	div{
+		font-size: 30px;
+        margin-bottom: 10px;
+        position: center;
+	}
+body{
+margin:auto;
+text-align:center;
+background-repeat: no-repeat;
+background-color: orange;
+}
+button{
+    width: 100px;
+    height:50px;
+    color: white;
+    font-size: 30px;
+    background-color: green;
+    margin-top: 10px;
+}
+button:hover{
+    background-color: white;
+    color:green;
+}
+form{
+    position:center;
+    margin-top: 200px;
+}
+</style>
+
+<head>
+	<title>WorkFlow!</title>
+
+</head>
+<body>
+    <form >
+         <p><b>UserName:</b> <input type = "text" name = "first_name" /></p>
+         <p><b>Age:</b><input type="text" name="age"/></p>
+         <p><b>PassWord:</b> <input type = "password" id = "pwd" /></p>
+      </form>
+      <a href="main.html"><button>Login</button></a>
+      <b><p>Click on the checkbox to show 
+           or hide password: </p></b> 
+  
+ 
+  
+ <input type="checkbox" onclick="Toggle()"> 
+    <b>Show Password</b> 
+  
+    <script> 
+    // Change the type of input to password or text 
+        function Toggle() { 
+            var temp = document.getElementById("pwd"); 
+            if (temp.type === "password") { 
+                temp.type = "text"; 
+            } 
+            else { 
+                temp.type = "password"; 
+            } 
+        } 
+</script> 
+   </body>
+    
+</html>
+</body>
+</html>

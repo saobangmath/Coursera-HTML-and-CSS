@@ -1,0 +1,64 @@
+#h1{
+		color:gray;
+	}
+	p{
+		color:green;
+
+	}
+	
+	div{
+
+		font-size: 50px;
+		font-style: italic;
+		color:blue;
+	}
+	button{
+		background-color: green;
+		color: white;
+		padding: 15px 40px ;
+		font-size:40px;
+	}
+
+body{
+
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	text-align:center;
+	background-color: #ffffff;
+	color:pink ;
+}
+ul li:nth-child(even){
+	color: green;
+	background-color: yellow;
+	font-size:20px;
+}
+button:hover{
+	cursor: default;
+	background-color:white ;
+	color: green;
+	cursor: pointer;
+}
+p.Algorithm{
+	color: purple;
+	font-size: 30px;
+}
+a>p{  
+	background-color: yellow;
+}
+
+a button{
+	color:orange;
+}
+a:active{
+	color: green;
+}
+p{
+	color: red;
+	font-size: 30px;
+}
+p:hover{
+	color:red;
+}
+footer{
+	font-size: 30px; 
+}

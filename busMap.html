@@ -1,0 +1,421 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BusMap - Xe buýt thành phố</title>
+<script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/5E6560E2-E303-C44C-96CE-02A0ED8428C0/main.js" charset="UTF-8"></script><base href="/">
+<script src="/cdn-cgi/apps/head/75eRHjXp2hv8hbReRQ3HYcLT1Mw.js"></script><link rel="stylesheet" media="screen" href="/assets/application-3782eb7eae4855ad8dfda35ef2f8716b.css" />
+<meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="5Yi/dGxtdWBMvUy3fFugfo/M6WG37WN0QFMXvoHnxEM1AQnyd6savHzIyuHyMDk49O+7TbCGwrtYzDIw4k5rXg==" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<link rel="shortcut icon" type="image/x-icon" href="/assets/busmap_icon-4d0ea5e2a35fdb4742b0bb883dbd9ced.ico" />
+</head>
+<body>
+<div id="top-bar" class="slide-down">
+<nav class="top-bar fixed" data-topbar role="navigation" style="overflow: auto; ">
+<ul class="hide-for-large-up title-area" style="float: left;">
+<li class="name">
+<h1 class="font-bold color-white busmap-title"><a href="/">BUSMAP</a></h1>
+</li>
+</ul>
+<section class="top-bar-section" style="float: right;">
+<div class="row">
+<ul class="right">
+<li class="top-bar-list-item">
+<a id="nav-button-welcome" class="font-normal">HOME</a>
+</li>
+<li class="top-bar-list-item">
+<a id="nav-button-intro" class="font-normal">GIỚI THIỆU</a>
+</li>
+<li class="top-bar-list-item">
+<a id="nav-button-features" class="font-normal">TÍNH NĂNG</a>
+</li>
+<li class="top-bar-list-item">
+<a id="nav-button-screenshots" class="font-normal">SCREENSHOTS</a>
+</li>
+<li class="top-bar-list-item">
+<a id="nav-button-download" class="font-normal">TẢI VỀ</a>
+</li>
+<li>
+<img class="language-btn" src="/assets/EN-9b7b86f56e948c384bfa7f54da6f2ee4.png" alt="En" />
+</li>
+</ul>
+</div>
+</section>
+</nav>
+</div>
+<input id="language" type="hidden" value="EN.png">
+<div id="panel-welcome" class="panel-section">
+<div class="vertical-container">
+<div class="row">
+<div id="panel-welcome-info-div" class="medium-5 columns">
+<h1 class="font-bold">BUSMAP</h1>
+<h3 class="font-light">Ứng dụng hỗ trợ đi xe buýt tại Thành phố Hồ Chí Minh</h3>
+<p class="font-light">Đã có mặt trên <span class="font-normal">Android</span>, <span class="font-normal">iOS</span> và <span class="font-normal">Windows Phone</span></p>
+<a id="nav-button-download2" class="busmap-button">
+<i class="fa fa-download"></i>
+<span class="font-normal" style="margin-left: 4px;">Tải về</span>
+</a>
+<a id="webapp-button-download" class="busmap-button">
+<img class="webapp" src="/assets/webapp-831cacfdcc716a9022a6c3226d5faa32.png" alt="Webapp" />
+<img class="webapp2" src="/assets/webapp2-d632a44878136ab6e15897d4ae75214b.png" alt="Webapp2" />
+<span class="font-normal" style="margin-left: 4px;">BusMap phiên bản Web</span>
+</a>
+</div>
+<div class="medium-6 columns medium-offset-1 text-center app-screen-shots show-for-medium-up">
+<img src="/assets/homepage-f55e6ede6376aaa144a10948ace05587.png" alt="Homepage" />
+</div>
+</div>
+</div>
+</div>
+<div id="panel-intro" class="panel-section">
+<div class="vertical-container">
+<div class="row">
+<div class="medium-6 columns show-for-medium-up">
+<img src="/assets/intro-4fec008974a8b1f78625b789b3aafabf.png" alt="Intro" />
+</div>
+<div class="medium-6 columns">
+<div id="intro-text">
+<h2 class="font-normal color-dark">BusMap là gì?</h2>
+<g:plusone></g:plusone>
+<div class="line-segment"></div>
+<p class="font-light color-dark" id="intro-show">
+Xe buýt ngày càng trở thành phương tiện công cộng phổ biến, mọi người được khuyến khích sử dụng xe buýt nhiều hơn vì độ an toàn và thân thiện với môi trường. Ở TP. Hồ Chí Minh có hơn 100 tuyến xe buýt khác nhau với hơn 2000 điểm dừng. Vì vậy việc di chuyển bằng xe buýt trong các đô thị này là hết sức thuận tiện. Từ lí do đó, BusMap đã ra đời với mục đích sẽ giúp cho mọi người đi xe buýt tốt hơn và thuận tiện hơn.
+</p>
+<ul class="strengths-list">
+<li class="font-light">
+<i class="fa fa-database"></i>
+<span class="font-light color-dark">Dữ liệu được cung cấp chính thức bởi sở GTVT Thành phố Hồ Chí Minh</span>
+</li>
+<li class="font-light">
+<i class="fa fa-smile-o"></i>
+<span class="font-light color-dark">Giao diện thân thiện, dễ sử dụng</span>
+</li>
+<li class="font-light">
+<i class="fa fa-tasks"></i>
+<span class="font-light color-dark">Nhiều tính năng hỗ trợ việc đi lại bằng xe buýt thuận tiện hơn</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="panel-features" class="panel-section bg-gray">
+<div class="vertical-container">
+<div class="row text-center">
+<h2 class="font-normal color-dark">Các Tính Năng</h2>
+<div class="medium-4 columns text-right">
+<ul class="features-list left">
+<li>
+<div class="feature-element">
+<div class="row">
+<div class="small-12 columns text-center show-for-small-only">
+<div class="icon text-center color-green">
+<div class="inner-circle">
+<i class="fa fa-search"></i>
+</div>
+</div>
+</div>
+<div class="small-12 columns hide-for-large-up">
+<h5 class="font-normal color-green">Tìm đường đi thông minh</h5>
+<p class="font-light color-dark">
+Chỉ dẫn cho người dùng những cách đi tốt nhất bằng xe buýt giữa 2 địa điểm bất kì
+</p>
+</div>
+<div class="large-9 columns show-for-large-up">
+<h5 class="font-normal color-green">Tìm đường đi thông minh</h5>
+<p class="font-light color-dark">
+Chỉ dẫn cho người dùng những cách đi tốt nhất bằng xe buýt giữa 2 địa điểm bất kì
+</p>
+</div>
+<div class="large-3 columns text-center show-for-large-up">
+<div class="icon text-center color-green">
+<div class="inner-circle">
+<i class="fa fa-search"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="feature-element">
+<div class="row">
+<div class="small-12 columns text-center show-for-small-only">
+<div class="icon text-center color-green">
+<div class="inner-circle">
+<i class="fa fa-clock-o"></i>
+</div>
+</div>
+</div>
+<div class="small-12 columns hide-for-large-up">
+<h5 class="font-normal color-green">Xem thời gian chờ xe buýt</h5>
+<p class="font-light color-dark">
+Xem thời gian xe buýt sẽ đến tại một trạm bất kì, dựa trên dữ liệu thời gian thực từ GPS của xe buýt
+</p>
+</div>
+<div class="large-9 columns show-for-large-up">
+<h5 class="font-normal color-green">Xem thời gian chờ xe buýt</h5>
+<p class="font-light color-dark">
+Xem thời gian xe buýt sẽ đến tại một trạm bất kì, dựa trên dữ liệu thời gian thực từ GPS của xe buýt
+</p>
+</div>
+<div class="large-3 columns text-center show-for-large-up">
+<div class="icon text-center color-green">
+<div class="inner-circle">
+<i class="fa fa-clock-o"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="feature-element">
+<div class="row">
+<div class="small-12 columns text-center show-for-small-only">
+<div class="icon text-center color-green">
+<div class="inner-circle">
+<i class="fa fa-info"></i>
+</div>
+</div>
+</div>
+<div class="small-12 columns hide-for-large-up">
+<h5 class="font-normal color-green">Tra cứu thông tin</h5>
+<p class="font-light color-dark">
+Tra cứu thông tin chi tiết của từng tuyến xe: biểu đồ giờ xuất bến, các trạm đi qua
+</p>
+</div>
+<div class="large-9 columns show-for-large-up">
+<h5 class="font-normal color-green">Tra cứu thông tin</h5>
+<p class="font-light color-dark">
+Tra cứu thông tin chi tiết của từng tuyến xe: biểu đồ giờ xuất bến, các trạm đi qua
+</p>
+</div>
+<div class="large-3 columns text-center show-for-large-up">
+<div class="icon text-center color-green">
+<div class="inner-circle">
+<i class="fa fa-info"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="medium-4 columns text-center">
+<img id="features-show" src="/assets/features-8da6ef96bc14fa43b65fb923ea301635.png" alt="Features" />
+</div>
+<div class="medium-4 columns text-left">
+<ul class="features-list right">
+<li>
+<div class="feature-element">
+<div class="row">
+<div class="medium-3 columns text-center hide-for-medium-only">
+<div class="icon text-center color-green">
+<div class="inner-circle">
+<i class="fa fa-bus"></i>
+</div>
+</div>
+</div>
+<div class="large-9 columns show-for-large-up">
+<h5 class="font-normal color-green">Tìm trạm dừng</h5>
+<p class="font-light color-dark">
+Tìm kiếm vị trí trạm dừng xe buýt gần vị trí người dùng hiện tại, hiển thị trực quan trên bản đồ
+</p>
+</div>
+<div class="small-12 columns hide-for-large-up">
+<h5 class="font-normal color-green">Tìm trạm dừng</h5>
+<p class="font-light color-dark">
+Tìm kiếm vị trí trạm dừng xe buýt gần vị trí người dùng hiện tại, hiển thị trực quan trên bản đồ
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="feature-element">
+<div class="row">
+<div class="medium-3 columns text-center hide-for-medium-only">
+<div class="icon text-center color-green">
+<div class="inner-circle">
+<i class="fa fa-database"></i>
+</div>
+</div>
+</div>
+<div class="large-9 columns show-for-large-up">
+<h5 class="font-normal color-green">Cập nhật dữ liệu trực tuyến</h5>
+<p class="font-light color-dark">
+Giúp ứng dụng luôn được chạy với dữ liệu xe buýt mới nhất của Tp.Hồ Chí Minh
+</p>
+</div>
+<div class="small-12 columns hide-for-large-up">
+<h5 class="font-normal color-green">Cập nhật dữ liệu trực tuyến</h5>
+<p class="font-light color-dark">
+Giúp ứng dụng luôn được chạy với dữ liệu xe buýt mới nhất của Tp.Hồ Chí Minh
+</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="feature-element">
+<div class="row">
+<div class="medium-3 columns text-center hide-for-medium-only">
+<div class="icon text-center color-green">
+<div class="inner-circle">
+<i class="fa fa-comments"></i>
+</div>
+</div>
+</div>
+<div class="large-9 columns show-for-large-up">
+<h5 class="font-normal color-green">Phản hồi ý kiến</h5>
+<p class="font-light color-dark">
+Chức năng phản hồi ý kiến về chất lượng xe buýt cho Trung tâm Điều hành
+</p>
+</div>
+<div class="small-12 columns hide-for-large-up">
+<h5 class="font-normal color-green">Phản hồi ý kiến</h5>
+<p class="font-light color-dark">
+Chức năng phản hồi ý kiến về chất lượng xe buýt cho Trung tâm Điều hành
+</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="panel-screenshots" class="panel-section">
+<div class="vertical-container">
+<div class="row text-center">
+<h2 class="font-normal color-dark">Screenshots</h2>
+<div class="flexslider show-for-small-only">
+<ul class="slides">
+<li>
+<img src="/assets/screenshot1-bb9dba1a7d0ef14d8fe00c4e0666165b.png" alt="Screenshot1" />
+</li>
+<li>
+<img src="/assets/screenshot2-9cb6131d94fae9bbdb714c0947a5d5e5.png" alt="Screenshot2" />
+</li>
+<li>
+<img src="/assets/screenshot3-bd3fcb3c8a66b9b39cdc014dca646b2a.png" alt="Screenshot3" />
+</li>
+<li>
+<img src="/assets/screenshot4-366ee62804c3e08e14438f5605fed05a.png" alt="Screenshot4" />
+</li>
+<li>
+<img src="/assets/screenshot5-8da6ef96bc14fa43b65fb923ea301635.png" alt="Screenshot5" />
+</li>
+<li>
+<img src="/assets/screenshot6-f821c2dbe96f10c48389e31563d16078.png" alt="Screenshot6" />
+</li>
+</ul>
+</div>
+<div class="flexslider show-for-medium-up">
+<ul class="slides">
+<li>
+<ul class="medium-block-grid-3">
+<li>
+<img src="/assets/screenshot1-bb9dba1a7d0ef14d8fe00c4e0666165b.png" alt="Screenshot1" />
+</li>
+<li>
+<img src="/assets/screenshot2-9cb6131d94fae9bbdb714c0947a5d5e5.png" alt="Screenshot2" />
+</li>
+<li>
+<img src="/assets/screenshot3-bd3fcb3c8a66b9b39cdc014dca646b2a.png" alt="Screenshot3" />
+</li>
+</ul>
+</li>
+<li>
+<ul class="medium-block-grid-3">
+<li>
+<img src="/assets/screenshot4-366ee62804c3e08e14438f5605fed05a.png" alt="Screenshot4" />
+</li>
+<li>
+<img src="/assets/screenshot5-8da6ef96bc14fa43b65fb923ea301635.png" alt="Screenshot5" />
+</li>
+<li>
+<img src="/assets/screenshot6-f821c2dbe96f10c48389e31563d16078.png" alt="Screenshot6" />
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="panel-download" class="panel-section">
+<div class="vertical-container">
+<div class="row text-center">
+<h2 class="font-light color-dark">Tải ứng dụng</h2>
+<div class="row download-section">
+<div class="large-8 columns large-offset-2 medium-10 medium-offset-1 small-6 small-offset-3 end">
+<ul class="small-block-grid-3">
+<li class="ios-button">
+<a href="https://itunes.apple.com/us/app/busmap-xe-buyt-thanh-pho/id1077969531" class="busmap-button">
+<i class="fa fa-apple"></i>
+<span class="font-normal" style="margin-left: 4px;">App Store</span>
+</a>
+</li>
+<li class="android-button">
+<a href="https://play.google.com/store/apps/details?id=com.t7.busmap" class="busmap-button">
+<i class="fa fa-android"></i>
+<span class="font-normal" style="margin-left: 4px;">Play Store</span>
+</a>
+</li>
+<li class="winphone-button">
+<a href="https://www.microsoft.com/en-us/store/apps/busmap/9nblgggxwknb" class="busmap-button">
+<i class="fa fa-windows"></i>
+<span class="font-normal" style="margin-left: 4px;">Windows Store</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+<br />
+<br />
+<h2 class="font-light color-dark">Cập nhật những tin tức mới nhất</h2>
+<div class="contact-row text-center">
+<ul>
+<li>
+<a href="https://www.facebook.com/busmap.hcm" class="contact-button facebook">
+<i class="fa fa-facebook-f"></i>
+</a>
+</li>
+<li>
+<a href="/cdn-cgi/l/email-protection#4d3e383d3d223f390d2f383e202c3d633b23" class="contact-button mail">
+<i class="fa fa-envelope"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="row text-center">
+<h6 class="font-light">Được sự hỗ trợ từ Sở GTVT Thành phố Hồ Chí Minh<br />Trung tâm quản lý và điều hành vận tải hành khách công cộng</h6>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAqTCmGrK4J42n7pDMy1yAl9JYNiDTdeaQ&libraries=places"></script>
+<script src="/assets/application-c022320513618fc687825fcd11d9dd26.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<input id="lollipop" type="hidden" value="">
+<input id="key" type="hidden" value="">
+<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-91419370-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</html>
